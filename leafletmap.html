@@ -23,18 +23,17 @@
 			});
 			var center = new L.LatLng(38.6481, -90.3044); //Map initial Center
 			var zoom = 17; //Map initial zoom level
-			})
-			 .addTo(map);
-
+			
 			//Your code below here. Modify the 
 			//Create a map at the specified zoom level and map center above.
 			//Use the "map" div element for your map.
 			//Use the 'osm' basemap, and overlay with features from GeoJSON object 'wifi'
 
             var map = L.map('map').setView([38.6, -90.3], 10);
-
-            
-            //  Add the wi-fi data to the map.	
+			})
+			 .addTo(map);
+			
+            //  Add wifipts to the map.	
             //  First, create a circle marker style for the points.
             var geojsonMarkerOptions = {
                 radius: 4, //  Marker size in pixels.
@@ -44,8 +43,8 @@
                 opacity: 1, //  Outline opacity.
                 fillOpacity: 0.5 //  Fill opacity.
             };
-            //  Display imported wi-fi data.
-            L.geoJson(sales, {
+            //  Display imported wifipts.
+            L.geoJson(wifipts, {
                 pointToLayer: function (wifipts, latlng) {
                     return L.circleMarker(latlng, geojsonMarkerOptions);
             }
