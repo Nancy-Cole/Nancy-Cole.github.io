@@ -135,7 +135,7 @@ National Historic Sites by U.S. Congressional District in Missouri (Nancy Cole)
 
             //  Define a new feature layer of historic sites from the MSDIS ArcGIS server.
             var hsites = new FeatureLayer(
-                "http://msdisweb.missouri.edu/ArcGIS/rest/services/MSDIS_Download/MapServer/32", {
+                "http://http://msdisweb-nn.col.missouri.edu:6080/arcgis/rest/services/MSDIS_Download_workingV2_Maytest/MapServer/31", {
                     mode: FeatureLayer.MODE_ONDEMAND, //  Query mode for the feature layer.
                     outFields: ["*"],
                     infoTemplate: template_hsites
